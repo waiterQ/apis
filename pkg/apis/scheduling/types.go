@@ -284,6 +284,8 @@ type QueueStatus struct {
 	// The number of `Completed` PodGroup in this queue.
 	Completed int32
 
+	// Resource allocated in this queue.
+	Allocated v1.ResourceList `json:"allocated,omitempty" protobuf:"bytes,8,opt,name=allocated"`
 	// Reservation is the profile of resource reservation for queue
 	Reservation Reservation `json:"reservation,omitempty" protobuf:"bytes,6,opt,name=reservation"`
 }
